@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.SignInFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/header_cv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardElevation="20dp"
+        app:cardMaxElevation="0dp"
+        app:cardPreventCornerOverlap="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/shape_app_pages_header" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/main_cv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="32dp"
+        android:background="@android:color/transparent"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardElevation="20dp"
+        app:cardMaxElevation="0dp"
+        app:cardPreventCornerOverlap="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/shape_white_one_radius_cv_bg" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/page_title_label_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:text="Sign In"
+                android:textColor="@color/brown"
+                android:textSize="30sp"
+                app:layout_constraintBottom_toTopOf="@+id/et_cons"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/et_cons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/shape_input_et"
+                app:layout_constraintBottom_toTopOf="@+id/frame_Layout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/page_title_label_tv">
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/email_til_si"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toTopOf="@+id/pass_til_si"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <EditText
+                        android:id="@+id/email_et_si"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/transparent"
+                        android:hint="Email"
+                        android:inputType="textEmailAddress"
+                        android:textColor="@color/light_brown"
+                        android:textDirection="locale"
+                        android:textSize="15sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/pass_til_si"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="32dp"
+                    android:textDirection="locale"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/email_til_si"
+                    app:passwordToggleEnabled="true"
+                    app:passwordToggleTint="@color/yellow">
+
+                    <EditText
+                        android:id="@+id/pass_et_si"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/transparent"
+                        android:hint="Password"
+                        android:inputType="textPassword"
+                        android:textColor="@color/brown"
+                        android:textDirection="locale"
+                        android:textSize="15sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <!--            <TextView-->
+            <!--                android:id="@+id/forgot_pass_tv"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginTop="16dp"-->
+            <!--                android:padding="16dp"-->
+            <!--                android:text="forgot password ?"-->
+            <!--                android:textColor="@color/yellow"-->
+            <!--                android:textSize="12sp"-->
+            <!--                android:visibility="visible"-->
+            <!--                app:layout_constraintBottom_toTopOf="@+id/sign_in_btn"-->
+            <!--                app:layout_constraintEnd_toEndOf="@+id/et_cons"-->
+            <!--
+                         app:layout_constraintTop_toBottomOf="@+id/et_cons" />-->
+            <FrameLayout
+                android:id="@+id/frame_Layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="64dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="64dp"
+                app:layout_constraintBottom_toTopOf="@+id/sign_in_tv1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_cons">
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/sign_in_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_bg"
+                    android:paddingStart="32dp"
+                    android:paddingEnd="32dp"
+                    android:text="sign In"
+                    android:textColor="@android:color/white" />
+                <ProgressBar
+                    android:id="@+id/loader_login"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:theme="@style/progressBarBrown"
+                    android:outlineAmbientShadowColor="@color/brown"
+                    tools:targetApi="p" />
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/sign_in_tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:paddingStart="16dp"
+                android:paddingTop="16dp"
+                android:paddingEnd="8dp"
+                android:paddingBottom="16dp"
+                android:text="Don't you have an account ?"
+                android:textColor="@color/yellow"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toStartOf="@+id/sign_in_tv2"
+                app:layout_constraintStart_toStartOf="@+id/frame_Layout"
+                app:layout_constraintTop_toBottomOf="@+id/frame_Layout" />
+
+            <TextView
+                android:id="@+id/sign_in_tv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="2dp"
+                android:paddingTop="16dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="16dp"
+                android:text="Sign Up"
+                android:textColor="@color/brown"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/sign_in_tv1"
+                app:layout_constraintStart_toEndOf="@+id/sign_in_tv1"
+                app:layout_constraintTop_toTopOf="@+id/sign_in_tv1" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout></androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:layout_height="200dp"
+        android:layout_width="200dp"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardElevation="20dp"
+        app:cardMaxElevation="0dp"
+        app:cardPreventCornerOverlap="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:adjustViewBounds="true"
+            android:layout_height="200dp"
+            android:layout_marginTop="8dp"
+            android:layout_width="200dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_fork" />
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

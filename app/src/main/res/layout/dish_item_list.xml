@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dish_card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="4dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="4dp"
+    android:layout_marginBottom="8dp"
+    android:backgroundTint="@color/hollo_yellow"
+    app:cardCornerRadius="5dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+
+        <ImageView
+            android:id="@+id/dish_iv"
+            android:layout_width="130dp"
+            android:layout_height="140dp"
+            android:src="@drawable/ic_beef"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/dish_title_tv"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/dish_title_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Dish Title"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/brown"
+            app:layout_constraintBottom_toTopOf="@+id/dish_type_tv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/dish_iv"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/dish_type_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="type"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@id/dish_price_tv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/dish_iv"
+            app:layout_constraintTop_toBottomOf="@+id/dish_title_tv" />
+
+<!--        <RatingBar-->
+<!--            android:id="@+id/rate_bar"-->
+<!--            style="@style/Widget.AppCompat.RatingBar.Small"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="8dp"-->
+<!--            android:numStars="5"-->
+<!--            android:saveEnabled="false"-->
+<!--            android:theme="@style/RatingBar"-->
+<!--            android:visibility="gone"-->
+<!--            app:layout_constraintBottom_toTopOf="@id/dish_price_tv"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toEndOf="@+id/dish_iv"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/dish_type_tv" />-->
+
+        <TextView
+            android:id="@+id/dish_price_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="price"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/dish_iv"
+            app:layout_constraintTop_toBottomOf="@+id/dish_type_tv" />
+        <TextView
+            android:id="@+id/dolar_sign_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="$"
+            android:gravity="start"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/dish_price_tv"
+            app:layout_constraintStart_toEndOf="@+id/dish_price_tv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/dish_price_tv" />
+<!--        <ImageView-->
+<!--            android:id="@+id/add_cart_dish_bt"-->
+<!--            android:layout_width="30dp"-->
+<!--            android:layout_height="30dp"-->
+<!--            android:layout_marginTop="16dp"-->
+<!--            android:layout_marginEnd="16dp"-->
+<!--            android:layout_marginBottom="16dp"-->
+<!--            android:background="@drawable/ic_cart_add"-->
+<!--            app:layout_constraintStart_toEndOf="@+id/dolar_sign_tv"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent" />-->
+<!--        <ImageView-->
+<!--            android:id="@+id/right_cart_dish_bt"-->
+<!--            android:layout_width="30dp"-->
+<!--            android:layout_height="30dp"-->
+<!--            android:layout_marginTop="16dp"-->
+<!--            android:layout_marginEnd="16dp"-->
+<!--            android:layout_marginBottom="16dp"-->
+<!--            android:visibility="invisible"-->
+<!--            android:background="@drawable/ic_cart_right"-->
+<!--            app:layout_constraintStart_toEndOf="@+id/dolar_sign_tv"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent" />-->
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

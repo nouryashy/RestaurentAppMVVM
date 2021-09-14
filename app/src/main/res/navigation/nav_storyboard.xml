@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_storyboard"
+    app:startDestination="@id/signUpFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.restaurentappmvvm.ui.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_signInFragment"
+            app:destination="@id/signInFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_allDishesFragment"
+            app:destination="@id/allDishesFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_catDishFragment"
+            app:destination="@id/catDishFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_dishDetailsFragment"
+            app:destination="@id/dishDetailsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_myCartFragment"
+            app:destination="@id/myCartFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.example.restaurentappmvvm.ui.SignUpFragment"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up" >
+        <action
+            android:id="@+id/action_signUpFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_signUpFragment_to_signInFragment"
+            app:destination="@id/signInFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="com.example.restaurentappmvvm.ui.SignInFragment"
+        android:label="fragment_sign_in"
+        tools:layout="@layout/fragment_sign_in" >
+        <action
+            android:id="@+id/action_signInFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+        <action
+            android:id="@+id/action_signInFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/allDishesFragment"
+        android:name="com.example.restaurentappmvvm.ui.AllDishesFragment"
+        android:label="fragment_all_dishes"
+        tools:layout="@layout/fragment_all_dishes" >
+        <action
+            android:id="@+id/action_allDishesFragment_to_dishDetailsFragment"
+            app:destination="@id/dishDetailsFragment" />
+        <action
+            android:id="@+id/action_allDishesFragment_to_myCartFragment"
+            app:destination="@id/myCartFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/catDishFragment"
+        android:name="com.example.restaurentappmvvm.ui.CatDishFragment"
+        android:label="fragment_cat_dish"
+        tools:layout="@layout/fragment_cat_dish" >
+        <argument
+            android:name="type"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_catDishFragment_to_dishDetailsFragment"
+            app:destination="@id/dishDetailsFragment" />
+        <action
+            android:id="@+id/action_catDishFragment_to_myCartFragment"
+            app:destination="@id/myCartFragment" />
+    </fragment>
+    <activity
+        android:id="@+id/splachActivity"
+        android:name="com.example.restaurentappmvvm.ui.SplachActivity"
+        android:label="activity_splach"
+        tools:layout="@layout/activity_splach" />
+    <fragment
+        android:id="@+id/dishDetailsFragment"
+        android:name="com.example.restaurentappmvvm.ui.DishDetailsFragment"
+        android:label="fragment_dish_details"
+        tools:layout="@layout/fragment_dish_details" >
+        <argument
+            android:name="dishDescription"
+            app:argType="string" />
+        <argument
+            android:name="dishType"
+            app:argType="string" />
+        <argument
+            android:name="dishPrice"
+            app:argType="string" />
+        <argument
+            android:name="dishTitle"
+            app:argType="string" />
+        <argument
+            android:name="dishImg"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_dishDetailsFragment_to_myCartFragment"
+            app:destination="@id/myCartFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/myCartFragment"
+        android:name="com.example.restaurentappmvvm.ui.MyCartFragment"
+        android:label="fragment_my_cart"
+        tools:layout="@layout/fragment_my_cart" >
+        <action
+            android:id="@+id/action_myCartFragment_to_addressFragment"
+            app:destination="@id/addressFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addressFragment"
+        android:name="com.example.restaurentappmvvm.ui.AddressFragment"
+        android:label="fragment_address"
+        tools:layout="@layout/fragment_address" >
+        <action
+            android:id="@+id/action_addressFragment_to_addAddressFragment"
+            app:destination="@id/addAddressFragment" />
+        <argument
+            android:name="totalPrice"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_addressFragment_to_paymentFragment"
+            app:destination="@id/paymentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addAddressFragment"
+        android:name="com.example.restaurentappmvvm.ui.AddAddressFragment"
+        android:label="fragment_add_address"
+        tools:layout="@layout/fragment_add_address" />
+    <fragment
+        android:id="@+id/paymentFragment"
+        android:name="com.example.restaurentappmvvm.ui.PaymentFragment"
+        android:label="fragment_payment"
+        tools:layout="@layout/fragment_payment" />
+</navigation>
