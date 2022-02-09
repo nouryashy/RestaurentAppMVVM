@@ -13,7 +13,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.restaurentappmvvm"
-        minSdkVersion 18
+        minSdkVersion 19
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
@@ -90,4 +90,7 @@ dependencies {
     // FirebaseUI for Cloud Storage
     implementation 'com.firebaseui:firebase-ui-storage:7.2.0'
 
+
+    //razorpay payment
+    implementation 'com.razorpay:checkout:1.6.6'
 }

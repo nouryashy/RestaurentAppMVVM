@@ -53,11 +53,11 @@ class AddressFragment : Fragment(), AddressAdapter.SelectedAddress {
         intiAddressRecycleViewAndAdapter()
 
         add_addr_now_bt.setOnClickListener {
-            val action = AddressFragmentDirections.actionAddressFragmentToAddAddressFragment()
+            val action = AddressFragmentDirections.actionAddressFragmentToAddAddressFragment(totalPriceAmount!!)
             findNavController().navigate(action)
         }
         payment_bt.setOnClickListener {
-            val action = AddressFragmentDirections.actionAddressFragmentToPaymentFragment()
+            val action = AddressFragmentDirections.actionAddressFragmentToPaymentFragment(totalPriceAmount!!)
             findNavController().navigate(action)
 
         }
@@ -88,7 +88,6 @@ class AddressFragment : Fragment(), AddressAdapter.SelectedAddress {
         
         addressViewModel!!.getAddressItems().observe(viewLifecycleOwner,
             { addressModel ->
-
 
                 addressList.add(addressModel)
                 addressAdapter!!.notifyDataSetChanged()

@@ -53,16 +53,16 @@ class AuthAppRepository(application: Application) {
             }
     }
 
-        fun ifCurrentUserExist(view: View) {
-            if (firebaseAuth.currentUser != null) {
-                view.findNavController().navigate(R.id.action_signUpFragment_to_homeFragment)
-            }
+    fun ifCurrentUserExist(view: View) {
+        if (firebaseAuth.currentUser != null) {
+            view.findNavController().navigate(R.id.action_signUpFragment_to_homeFragment)
         }
+    }
 
-        fun signOut() {
-            firebaseAuth.signOut()
-            loggedOutLiveData.postValue(true)
-        }
+    fun signOut() {
+        firebaseAuth.signOut()
+        loggedOutLiveData.postValue(true)
+    }
 
 
     fun getUserLiveData(): MutableLiveData<FirebaseUser> {

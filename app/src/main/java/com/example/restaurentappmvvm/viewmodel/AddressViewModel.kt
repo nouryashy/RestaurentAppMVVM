@@ -16,4 +16,9 @@ class AddressViewModel(application: Application) : AndroidViewModel(application)
 
         return addressLiveData
     }
+
+
+    fun addAddress(addressMap: MutableMap<String, String>): MutableLiveData<MutableMap<String, String>> {
+        return addressRepository.addAddress(addressMap)
+    }
 }

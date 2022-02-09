@@ -134,10 +134,21 @@
         android:id="@+id/addAddressFragment"
         android:name="com.example.restaurentappmvvm.ui.AddAddressFragment"
         android:label="fragment_add_address"
-        tools:layout="@layout/fragment_add_address" />
+        tools:layout="@layout/fragment_add_address" >
+        <argument
+            android:name="totalPrice"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_addAddressFragment_to_addressFragment"
+            app:destination="@id/addressFragment" />
+    </fragment>
     <fragment
         android:id="@+id/paymentFragment"
         android:name="com.example.restaurentappmvvm.ui.PaymentFragment"
         android:label="fragment_payment"
-        tools:layout="@layout/fragment_payment" />
+        tools:layout="@layout/fragment_payment" >
+        <argument
+            android:name="totalPriceAmount"
+            app:argType="integer" />
+    </fragment>
 </navigation>
